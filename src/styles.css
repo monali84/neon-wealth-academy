@@ -1,5 +1,6 @@
 @import "tailwindcss" source(none);
 @source "../src";
+@source inline("{,hover:,group-hover:}{bg,text,border,from,to}-{neon-green,neon-pink,neon-purple,neon-yellow,electric-blue}{,/10,/15,/20,/30,/40,/60}");
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
