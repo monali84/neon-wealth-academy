@@ -20,6 +20,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const AMAZON_URL = "https://www.amazon.in/Teens-Money-Mastery-Anwesha-Patro-ebook/dp/B0GX38W4W3/ref=sr_1_1?crid=2287LTZPXE9MM&dib=eyJ2IjoiMSJ9.wIBoYKj2OZxeR0b07WB6XzAORpCnRTJfXl-KV_Z8GrIo-nt0LlE_xy7dYFlk6Z0dMwDU6Z5P_Ufh3W3pYjQ0aB8tQdnGIrr3Y_tCkTuyn1FJDMybPR8-ddj3a3hm9IRTz6lUWaRZBCtH56TupPn6VpCs5QaG2FHWW3AIuWa3dAhzU65tFYaovk3BJtHIN4f1hKRG64I6UInwosDbv7hStXi57EmkBeYDyzVLtGcqX7c.PUD6Pm5blmsXfrLFQGIKOPlf5pR5dD_nvYRcC-iBq_k&dib_tag=se&keywords=teen%27s+money+mastery&qid=1778220835&sprefix=%2Caps%2C365&sr=8-1";
+
 const skills = [
   { icon: PiggyBank, title: "Saving", desc: "Stack cash like a pro, even on allowance.", color: "neon-green" },
   { icon: Wallet, title: "Budgeting", desc: "Track every rupee without the headache.", color: "electric-blue" },
