@@ -78,7 +78,7 @@ function Index() {
             <a href="#learn" className="hover:text-foreground">Learn</a>
             <a href="#game" className="hover:text-foreground">Game</a>
             <a href="#author" className="hover:text-foreground">Author</a>
-            <a href="#reviews" className="hover:text-foreground">Reviews</a>
+            <a href="#reviews" className="hover:text-foreground">Why Early</a>
           </nav>
           <a href="#buy" className="rounded-full bg-neon-green px-5 py-2 text-sm font-semibold text-primary-foreground glow-green hover:scale-105 transition-transform">
             Buy Book
