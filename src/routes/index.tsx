@@ -20,6 +20,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const AMAZON_URL = "https://www.amazon.in/Teens-Money-Mastery-Anwesha-Patro-ebook/dp/B0GX38W4W3/ref=sr_1_1?crid=2287LTZPXE9MM&dib=eyJ2IjoiMSJ9.wIBoYKj2OZxeR0b07WB6XzAORpCnRTJfXl-KV_Z8GrIo-nt0LlE_xy7dYFlk6Z0dMwDU6Z5P_Ufh3W3pYjQ0aB8tQdnGIrr3Y_tCkTuyn1FJDMybPR8-ddj3a3hm9IRTz6lUWaRZBCtH56TupPn6VpCs5QaG2FHWW3AIuWa3dAhzU65tFYaovk3BJtHIN4f1hKRG64I6UInwosDbv7hStXi57EmkBeYDyzVLtGcqX7c.PUD6Pm5blmsXfrLFQGIKOPlf5pR5dD_nvYRcC-iBq_k&dib_tag=se&keywords=teen%27s+money+mastery&qid=1778220835&sprefix=%2Caps%2C365&sr=8-1";
+
 const skills = [
   { icon: PiggyBank, title: "Saving", desc: "Stack cash like a pro, even on allowance.", color: "neon-green" },
   { icon: Wallet, title: "Budgeting", desc: "Track every rupee without the headache.", color: "electric-blue" },
@@ -38,13 +40,13 @@ const levels = [
   { lvl: "04", title: "Wealth Wizard", xp: 95, badge: "👑", color: "neon-yellow" },
 ];
 
-const reviews = [
-  { name: "Aarav, 16", text: "Bro this book hits different. I finally get why my dad won't shut up about SIPs.", emoji: "🔥" },
-  { name: "Diya, 14", text: "Started a tiny side hustle after Chapter 5. Made ₹2k in two weeks. WHAT.", emoji: "💅" },
-  { name: "Kabir, 18", text: "Finance class made zero sense. This made it a game. 10/10 no notes.", emoji: "🎮" },
-  { name: "Meera, 15", text: "The compound interest chapter genuinely changed how I think about money.", emoji: "🤯" },
-  { name: "Riya, 17", text: "Cute illustrations, savage advice. My kind of book.", emoji: "✨" },
-  { name: "Arjun, 13", text: "Read it in two sittings. Already saved more than I did all year.", emoji: "💰" },
+const facts = [
+  { icon: TrendingUp, title: "Compounding loves time", text: "Investing ₹100/month at 15 can outgrow ₹500/month started at 30. Time is the cheat code.", color: "neon-green" },
+  { icon: ShieldAlert, title: "Most teens learn money the hard way", text: "Schools rarely teach budgeting, taxes, or investing — yet you'll use them every single month as an adult.", color: "neon-pink" },
+  { icon: ShoppingBag, title: "Lifestyle creep starts young", text: "That ‘small’ daily ₹150 spend is ₹54,000 a year. Awareness now = freedom later.", color: "electric-blue" },
+  { icon: Wallet, title: "Pocket money is practice money", text: "Treating allowance like a real income builds habits long before your first paycheck arrives.", color: "neon-yellow" },
+  { icon: ShieldAlert, title: "Scams target young people", text: "Fake gurus, ‘double your money’ DMs, sketchy crypto — knowing the red flags protects your future earnings.", color: "neon-purple" },
+  { icon: Sparkles, title: "Habits beat hacks", text: "Saving a fixed % every month for years quietly outperforms any viral get-rich trick.", color: "neon-green" },
 ];
 
 function Index() {
@@ -76,7 +78,7 @@ function Index() {
             <a href="#learn" className="hover:text-foreground">Learn</a>
             <a href="#game" className="hover:text-foreground">Game</a>
             <a href="#author" className="hover:text-foreground">Author</a>
-            <a href="#reviews" className="hover:text-foreground">Reviews</a>
+            <a href="#reviews" className="hover:text-foreground">Why Early</a>
           </nav>
           <a href="#buy" className="rounded-full bg-neon-green px-5 py-2 text-sm font-semibold text-primary-foreground glow-green hover:scale-105 transition-transform">
             Buy Book
@@ -266,7 +268,7 @@ function Index() {
               No jargon. No cringe. Just real strategies that work — explained like a friend, not a textbook.
             </p>
             <a
-              href="https://instagram.com/finwithanwesha"
+              href="https://www.instagram.com/finwithanwesha"
               target="_blank"
               rel="noreferrer"
               className="mt-7 inline-flex items-center gap-3 rounded-full glass px-6 py-3 hover:border-neon-pink/60 transition-colors"
@@ -279,24 +281,27 @@ function Index() {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section id="reviews" className="py-24">
-        <div className="mx-auto mb-12 max-w-7xl px-6 text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neon-yellow">Reader reactions</p>
-          <h2 className="font-display text-4xl font-black md:text-5xl">Teens are <span className="text-gradient-neon">hyped</span></h2>
-        </div>
-        <div className="relative overflow-hidden">
-          <div className="flex w-max gap-5 animate-marquee px-6">
-            {[...reviews, ...reviews].map((r, i) => (
-              <div key={i} className="w-[320px] shrink-0 glass rounded-2xl p-6 hover:scale-105 transition-transform">
-                <div className="mb-3 flex items-center justify-between">
-                  <div className="flex">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="h-4 w-4 fill-neon-yellow text-neon-yellow" />)}
-                  </div>
-                  <span className="text-2xl">{r.emoji}</span>
+      {/* WHY EARLY */}
+      <section id="reviews" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 text-center">
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neon-yellow">The real reason</p>
+            <h2 className="font-display text-4xl font-black md:text-5xl">
+              Why teens need <span className="text-gradient-neon">money skills early</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+              Small lessons learned in your teens compound into massive advantages by the time you're 25.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {facts.map((f, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-2xl glass p-6 hover:-translate-y-2 transition-transform">
+                <div className={`absolute -top-12 -right-12 h-32 w-32 rounded-full bg-${f.color}/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity`} />
+                <div className={`mb-5 inline-grid h-12 w-12 place-items-center rounded-xl bg-${f.color}/15 text-${f.color}`}>
+                  <f.icon className="h-6 w-6" />
                 </div>
-                <p className="mb-4 text-sm">"{r.text}"</p>
-                <p className="text-xs font-bold text-muted-foreground">— {r.name}</p>
+                <h3 className="mb-2 font-display text-lg font-bold">{f.title}</h3>
+                <p className="text-sm text-muted-foreground">{f.text}</p>
               </div>
             ))}
           </div>
@@ -316,7 +321,7 @@ function Index() {
               Grab Teen's Money Mastery on Kindle. One book. A whole new mindset.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <a href="#" className="group inline-flex items-center gap-3 rounded-full bg-neon-green px-9 py-5 text-lg font-bold text-primary-foreground glow-green animate-glow-pulse hover:scale-105 transition-transform">
+              <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-3 rounded-full bg-neon-green px-9 py-5 text-lg font-bold text-primary-foreground glow-green animate-glow-pulse hover:scale-105 transition-transform">
                 Buy on Amazon Kindle <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -329,7 +334,7 @@ function Index() {
       <footer className="border-t border-white/5 px-6 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
           <p>© 2026 Teen's Money Mastery · by FinwithAnwesha</p>
-          <a href="https://instagram.com/finwithanwesha" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
+          <a href="https://www.instagram.com/finwithanwesha" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
             <Instagram className="h-4 w-4" /> @FinwithAnwesha
           </a>
         </div>
