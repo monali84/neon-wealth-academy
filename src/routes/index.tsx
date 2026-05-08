@@ -268,7 +268,7 @@ function Index() {
               No jargon. No cringe. Just real strategies that work — explained like a friend, not a textbook.
             </p>
             <a
-              href="https://instagram.com/finwithanwesha"
+              href="https://www.instagram.com/finwithanwesha"
               target="_blank"
               rel="noreferrer"
               className="mt-7 inline-flex items-center gap-3 rounded-full glass px-6 py-3 hover:border-neon-pink/60 transition-colors"
@@ -334,7 +334,7 @@ function Index() {
       <footer className="border-t border-white/5 px-6 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
           <p>© 2026 Teen's Money Mastery · by FinwithAnwesha</p>
-          <a href="https://instagram.com/finwithanwesha" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
+          <a href="https://www.instagram.com/finwithanwesha" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
             <Instagram className="h-4 w-4" /> @FinwithAnwesha
           </a>
         </div>
