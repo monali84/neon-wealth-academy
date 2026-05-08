@@ -321,7 +321,7 @@ function Index() {
               Grab Teen's Money Mastery on Kindle. One book. A whole new mindset.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <a href="#" className="group inline-flex items-center gap-3 rounded-full bg-neon-green px-9 py-5 text-lg font-bold text-primary-foreground glow-green animate-glow-pulse hover:scale-105 transition-transform">
+              <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="group inline-flex items-center gap-3 rounded-full bg-neon-green px-9 py-5 text-lg font-bold text-primary-foreground glow-green animate-glow-pulse hover:scale-105 transition-transform">
                 Buy on Amazon Kindle <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
