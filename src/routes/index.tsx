@@ -281,24 +281,27 @@ function Index() {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section id="reviews" className="py-24">
-        <div className="mx-auto mb-12 max-w-7xl px-6 text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neon-yellow">Reader reactions</p>
-          <h2 className="font-display text-4xl font-black md:text-5xl">Teens are <span className="text-gradient-neon">hyped</span></h2>
-        </div>
-        <div className="relative overflow-hidden">
-          <div className="flex w-max gap-5 animate-marquee px-6">
-            {[...reviews, ...reviews].map((r, i) => (
-              <div key={i} className="w-[320px] shrink-0 glass rounded-2xl p-6 hover:scale-105 transition-transform">
-                <div className="mb-3 flex items-center justify-between">
-                  <div className="flex">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="h-4 w-4 fill-neon-yellow text-neon-yellow" />)}
-                  </div>
-                  <span className="text-2xl">{r.emoji}</span>
+      {/* WHY EARLY */}
+      <section id="reviews" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 text-center">
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neon-yellow">The real reason</p>
+            <h2 className="font-display text-4xl font-black md:text-5xl">
+              Why teens need <span className="text-gradient-neon">money skills early</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+              Small lessons learned in your teens compound into massive advantages by the time you're 25.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {facts.map((f, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-2xl glass p-6 hover:-translate-y-2 transition-transform">
+                <div className={`absolute -top-12 -right-12 h-32 w-32 rounded-full bg-${f.color}/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity`} />
+                <div className={`mb-5 inline-grid h-12 w-12 place-items-center rounded-xl bg-${f.color}/15 text-${f.color}`}>
+                  <f.icon className="h-6 w-6" />
                 </div>
-                <p className="mb-4 text-sm">"{r.text}"</p>
-                <p className="text-xs font-bold text-muted-foreground">— {r.name}</p>
+                <h3 className="mb-2 font-display text-lg font-bold">{f.title}</h3>
+                <p className="text-sm text-muted-foreground">{f.text}</p>
               </div>
             ))}
           </div>
