@@ -40,13 +40,13 @@ const levels = [
   { lvl: "04", title: "Wealth Wizard", xp: 95, badge: "👑", color: "neon-yellow" },
 ];
 
-const reviews = [
-  { name: "Aarav, 16", text: "Bro this book hits different. I finally get why my dad won't shut up about SIPs.", emoji: "🔥" },
-  { name: "Diya, 14", text: "Started a tiny side hustle after Chapter 5. Made ₹2k in two weeks. WHAT.", emoji: "💅" },
-  { name: "Kabir, 18", text: "Finance class made zero sense. This made it a game. 10/10 no notes.", emoji: "🎮" },
-  { name: "Meera, 15", text: "The compound interest chapter genuinely changed how I think about money.", emoji: "🤯" },
-  { name: "Riya, 17", text: "Cute illustrations, savage advice. My kind of book.", emoji: "✨" },
-  { name: "Arjun, 13", text: "Read it in two sittings. Already saved more than I did all year.", emoji: "💰" },
+const facts = [
+  { icon: TrendingUp, title: "Compounding loves time", text: "Investing ₹100/month at 15 can outgrow ₹500/month started at 30. Time is the cheat code.", color: "neon-green" },
+  { icon: ShieldAlert, title: "Most teens learn money the hard way", text: "Schools rarely teach budgeting, taxes, or investing — yet you'll use them every single month as an adult.", color: "neon-pink" },
+  { icon: ShoppingBag, title: "Lifestyle creep starts young", text: "That ‘small’ daily ₹150 spend is ₹54,000 a year. Awareness now = freedom later.", color: "electric-blue" },
+  { icon: Wallet, title: "Pocket money is practice money", text: "Treating allowance like a real income builds habits long before your first paycheck arrives.", color: "neon-yellow" },
+  { icon: ShieldAlert, title: "Scams target young people", text: "Fake gurus, ‘double your money’ DMs, sketchy crypto — knowing the red flags protects your future earnings.", color: "neon-purple" },
+  { icon: Sparkles, title: "Habits beat hacks", text: "Saving a fixed % every month for years quietly outperforms any viral get-rich trick.", color: "neon-green" },
 ];
 
 function Index() {
