@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   PiggyBank, Wallet, TrendingUp, Sparkles, Briefcase, ShieldAlert,
-  ShoppingBag, Repeat, Trophy, Zap, Flame, Star, Instagram, ArrowRight,
+  ShoppingBag, Repeat, Trophy, Zap, Flame, Instagram, ArrowRight,
   BookOpen, Rocket, Target, Award,
 } from "lucide-react";
 import bookCover from "@/assets/book-cover.png";
@@ -98,6 +98,9 @@ function Index() {
               Teen's <br />
               <span className="text-gradient-neon">Money Mastery</span>
             </h1>
+            <p className="mt-4 font-display text-2xl font-bold sm:text-3xl md:text-4xl text-gradient-neon">
+              Master money before money masters you.
+            </p>
             <p className="mt-6 max-w-lg text-lg text-muted-foreground">
               The finance book that hits like your favorite game. Stack cash, dodge scams, level up your future — all before college.
             </p>
@@ -108,12 +111,6 @@ function Index() {
               <a href="#learn" className="inline-flex items-center gap-2 rounded-full border border-white/20 glass px-7 py-4 text-base font-bold hover:border-neon-pink/60 transition-colors">
                 What's Inside
               </a>
-            </div>
-            <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-neon-yellow text-neon-yellow" />)}
-                <span className="ml-2">4.9/5 from teen readers</span>
-              </div>
             </div>
           </div>
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -262,7 +259,7 @@ function Index() {
             <p className="mb-3 text-sm font-bold uppercase tracking-widest text-neon-pink">Meet the author</p>
             <h2 className="font-display text-4xl font-black md:text-5xl">Hey, I'm <span className="text-gradient-neon">Anwesha</span></h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              I started learning about money at 14 and changed my whole future. I wrote this book because every teen deserves the cheat codes nobody handed me.
+              I created this book because I realized that teenagers learn many subjects in school, but very few are taught how money actually works. I wanted to make finance fun, practical, and easy to understand so that teens can build smart money habits early.
             </p>
             <p className="mt-3 text-muted-foreground">
               No jargon. No cringe. Just real strategies that work — explained like a friend, not a textbook.
