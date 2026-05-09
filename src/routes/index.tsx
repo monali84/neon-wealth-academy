@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import bookCover from "@/assets/book-cover.png";
 import authorImg from "@/assets/author.png";
+import Intro from "@/components/Intro";
 
 export const Route = createFileRoute("/")({
   head: () => ({
