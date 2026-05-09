@@ -98,7 +98,7 @@ function Index() {
               Teen's <br />
               <span className="text-gradient-neon">Money Mastery</span>
             </h1>
-            <p className="mt-4 font-display text-2xl font-bold sm:text-3xl md:text-4xl text-gradient-neon">
+            <p className="mt-4 font-display text-3xl font-black leading-tight text-neon-yellow drop-shadow-[0_0_25px_oklch(0.88_0.19_95/0.7)] sm:text-4xl md:text-5xl">
               Master money before money masters you.
             </p>
             <p className="mt-6 max-w-lg text-lg text-muted-foreground">
