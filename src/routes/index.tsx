@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import bookCover from "@/assets/book-cover.png";
 import authorImg from "@/assets/author.png";
+import Intro from "@/components/Intro";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -51,15 +52,26 @@ const facts = [
 
 function Index() {
   const [scrolled, setScrolled] = useState(false);
+  const [showIntro, setShowIntro] = useState(false);
+
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!sessionStorage.getItem("tmm_intro_played")) {
+      setShowIntro(true);
+    }
     const onScroll = () => setScrolled(window.scrollY > 400);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleIntroDone = () => {
+    sessionStorage.setItem("tmm_intro_played", "1");
+    setShowIntro(false);
+  };
+
   return (
     <div className="relative overflow-hidden">
-      {/* Floating neon shapes */}
+      {showIntro && <Intro onDone={handleIntroDone} />}
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute top-20 -left-20 h-72 w-72 rounded-full bg-neon-purple/30 blur-3xl animate-float" />
         <div className="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-electric-blue/25 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
