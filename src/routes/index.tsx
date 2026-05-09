@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   PiggyBank, Wallet, TrendingUp, Sparkles, Briefcase, ShieldAlert,
-  ShoppingBag, Repeat, Trophy, Zap, Flame, Star, Instagram, ArrowRight,
+  ShoppingBag, Repeat, Trophy, Zap, Flame, Instagram, ArrowRight,
   BookOpen, Rocket, Target, Award,
 } from "lucide-react";
 import bookCover from "@/assets/book-cover.png";
