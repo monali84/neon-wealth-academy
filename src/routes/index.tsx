@@ -71,7 +71,7 @@ function Index() {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Floating neon shapes */}
+      {showIntro && <Intro onDone={handleIntroDone} />}
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute top-20 -left-20 h-72 w-72 rounded-full bg-neon-purple/30 blur-3xl animate-float" />
         <div className="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-electric-blue/25 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
