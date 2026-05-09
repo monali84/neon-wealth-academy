@@ -52,11 +52,22 @@ const facts = [
 
 function Index() {
   const [scrolled, setScrolled] = useState(false);
+  const [showIntro, setShowIntro] = useState(false);
+
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!sessionStorage.getItem("tmm_intro_played")) {
+      setShowIntro(true);
+    }
     const onScroll = () => setScrolled(window.scrollY > 400);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleIntroDone = () => {
+    sessionStorage.setItem("tmm_intro_played", "1");
+    setShowIntro(false);
+  };
 
   return (
     <div className="relative overflow-hidden">
